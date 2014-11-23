@@ -126,6 +126,10 @@ header {
 	@include clearfix;
 }
 
+@mixin gallery-image($index) {
+	content: url("../images/gallery-#{$index}-resized.jpg");
+}
+
 .gallery {
 	padding: 0 0 8em 0;
 	
@@ -148,6 +152,22 @@ header {
 			&:hover {
 				@include transform(scale(1.2));
 			}
+		}
+
+		&:nth-child(1) img {
+			@include gallery-image(1);
+		}
+
+		&:nth-child(2) img {
+			@include gallery-image(2);
+		}
+
+		&:nth-child(3) img {
+			@include gallery-image(3);
+		}
+
+		&:nth-child(4) img {
+			@include gallery-image(4);
 		}
 	}
 
@@ -203,9 +223,30 @@ header {
 		@include clearfix;
 	}
 
-	hr {
-		margin: 0 auto;
+	#week-1 {
+		.thumb {
+			img {
+				content: url("../images/elearn-resized.jpg");
+			}
+		}
 	}
+
+	#week-2 {
+		.thumb {
+			img {
+				content: url("../images/themes-resized.jpg");
+			}
+		}
+	}
+	
+	#week-3 {
+		.thumb {
+			img {
+				content: url("../images/artists-resized.jpg");
+			}
+		}
+	}
+	
 	.note {
 		p {
 			padding: 0 4em;
