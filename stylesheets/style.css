@@ -113,7 +113,7 @@ header li:hover {
 }
 /* line 50, ../sass/style.scss */
 .hero:after {
-  background: url("../images/hero-1.jpg");
+  background: url("../images/hero-1-resized.jpg");
   background-size: cover;
   position: absolute;
   content: "";
