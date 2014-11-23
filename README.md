@@ -1,31 +1,29 @@
-### 3 pages in 3 weeks
+### Get started
 
-`3 pages in 3 weeks` esstentially is a series workshop which try to help `DEV`s, `QA`s or even `UX`s to practice the basic `HTML/CSS` skills. As the name says, we'll use 3 weeks to implement 3 pages, each page is a individual web design from `dribble.com`. 
+This is a simple boilerplate project for web designer/developer, it contains the following things:
 
-It doesn't matter which 3 pages your choose actaully, but the basic idea behind it is try to choose some `modern` and `fancy` ones.
+1.	Guardfile to watch changes
+2.	config.rb used for compass
+3.	A very simple HTML5 boilerplate file
 
-#### Week 1
+To use it, simply clone this repo and :
 
-Common workflow of how to build a static page from scrath by using:
+```sh
+$ bundle install
+```
 
-1.    Compass/SCSS
-2.    Guard + LiveReload
-3.    Using FontIcon as Icon
-4.    Google Fonts API
+After the required `gem`s are installed, you can then run 
 
-And also, some demostration and showcase will be involved. So people from no-tech background will get the basic understanding of what's happening.
+```sh
+$ guard start
+```
 
-#### Week 2
+And if you dont have the amazing chrome [plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) installed, you should. 
 
-Basic princples of Web Design
+Once it's installed, open the page in browser, and click the `live reload` button to enabled. You should then see something like this if you have `guard` started:
 
-1.    HTML5/CSS3 Basic
-2.    Transition
-3.    Animation
+```
+[1] guard(main)> 23:58:49 - INFO - Browser connected.
+```
 
-#### Week 3
-
-1.   How to use Color
-2.   How to use Image
-3.   What makes one design different with another
-4.   CRAP
+That's it, have fun with coding more interesting stuff.
