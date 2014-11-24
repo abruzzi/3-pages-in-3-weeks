@@ -59,6 +59,7 @@ header {
 		top: 0;
 		left: 0;
 	}
+
 	h2 {
 		font-size: 6em;
 		font-weight: bold;
@@ -70,10 +71,11 @@ header {
 	p {
 		max-width: 70%;
 		font-size: 1.5em;
-		color: white;
+		font-weight: lighter;
+		color: #cecece;
 		line-height: 1.4;
 		margin: 0 auto;
-		padding: 1em 0 5em 0;
+		padding: 1em 0 8em 0;
 		span {
 			color: $heading-color;
 		}
@@ -83,12 +85,13 @@ header {
 @mixin section-title() {
 	font-size: 2em;
 	text-transform: uppercase;
+	color: $heading-color;
 	padding: 2em 0;
 
 	&:after {
 		content: "";
 		display: block;
-		background-color: $heading-color;
+		background-color: #cccccc;
 		width: 2em;
 		height: .2em;
 		margin: .4em auto;
@@ -116,9 +119,9 @@ header {
 		}
 
 		p {
-			line-height: 1.2;
+			line-height: 1.4;
 			color: #6e6e6e;
-			padding: 0 2em;
+			padding: 0 8em;
 			margin-bottom: 4em;
 		}
 	}
@@ -131,7 +134,7 @@ header {
 }
 
 .gallery {
-	padding: 0 0 8em 0;
+	padding: 2em 0 8em 0;
 	
 	h3 {
 		@include section-title;
@@ -183,7 +186,7 @@ header {
 	}
 
 	.sample {
-		padding: 6em;
+		padding: 0 6em 8em 6em;
 	}
 
 	#week-1, #week-2, #week-3 {
@@ -194,10 +197,10 @@ header {
 			.thumb {
 				width: 100%;
 				height: 30em;
-				padding: 0 2em;
 				overflow: hidden;
 				img {
-					width: 100%;
+					width: 90%;
+					margin: 0 auto;
 				}
 			}
 
@@ -211,10 +214,11 @@ header {
 
 				p {
 					font-size: 1.5em;
-					line-height: 1.2;
+					font-weight: lighter;
+					line-height: 1.4;
 					color: #6e6e6e;
 					text-align: left;
-					padding: 1em 2em;
+					padding: .5em 2em;
 				}
 			}
 
@@ -250,6 +254,7 @@ header {
 	.note {
 		p {
 			padding: 0 4em;
+			color: #9e9e9e;
 			line-height: 1.2;
 			a {
 				color: $heading-color;
@@ -259,12 +264,12 @@ header {
 }
 
 footer {
-	li {
-		float: left;
+	p {
+		font-size: 1.5em;
+		color: white;
 		a {
-			font-size: 1.5em;
+			color: $heading-color;
 			text-decoration: none;
-			color: white;
 			display: inline-block;
 			padding: 1em 1em;
 		}
