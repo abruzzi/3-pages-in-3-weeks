@@ -38,138 +38,283 @@
 		<div class="reveal">
 
 			<div class="slides">
-				<section data-background="#007777">
+				<section data-background="#F68D2E">
 					<h1>3 pages in 3 weeks</h1>
 					<h2>week 2</h2>
 					<p>
 						<small>Created by <a href="http://icodeit.org">Juntao Qiu</a></small>
 					</p>
 				</section>
+
+
+				<section data-background="#407EC9">
+					<section>
+						<h2>HTML5 Elements</h2>
+					</section>
+
+					<section>
+						<ul>
+							<li>
+								<h3>nav</h3>
+							</li>
+							<li>
+								<h3>header</h3>
+							</li>
+							<li>
+								<h3>aside</h3>
+							</li>
+							<li>
+								<h3>section</h3>
+							</li>
+							<li>
+								<h3>article(as section)</h3>
+							</li>
+							<li>
+								<h3>footer</h3>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Semantics</h3>
+					</section>
+				</section>
+
+<style>
+	.box {
+		width: 200px;
+		height: 50px;
+	}
+
+	.without-radius {
+		background: white;
+		color: orange;	
+	}
+
+	.radius {
+		background: white;
+		color: orange;
+		border-radius: 4px;
+	}
 	
-				<section data-background="#0e90d2">
-					<section>
-						<h2>User <span style="color: yellow">interface</span></h2>
-					</section>
-					<section>
-						<h2>UI for developers</h2>
-						<pre><code data-item>
+	.gradient {
+		background: white;
+		color: orange;
+		background: linear-gradient(to bottom, #eee, #999, #eee);
+	}
 
-***<没钱赚商店>购物清单***
-名称：雪碧，数量：2瓶，单价：3.00(元)，小计：6.00(元)
-名称：可口可乐，数量：4瓶，单价：15.00(元)，小计：60.00(元)
-----------------------
-挥泪赠送商品：
-名称：雪碧，数量：1瓶
-----------------------
-总计：60.00(元)
-节省：3.00(元)
-**********************
-						</code></pre>
-					</section>
+	.shadow {
+		background: white;
+		color: orange;
+		box-shadow: 5px 5px 0 orange;
+	}
 
-					<section>
-						<h2>UI for human being</h2>
-						<a href="#" class="image navigate-down">
-							<img src="store.png" alt="blue print" style="width: 70%">
-						</a>
-					</section>
-				</section>				
-				
-				<section data-background="#C6538C">
-
-					<section>
-						<h2>Web development on <span style="color:lightgreen">steroids</span></h2>
+	.text-shadow {
+		text-shadow: 2px 2px 1px gray;
+	}
+</style>
+				<section>
+					<section data-background="#05C3DE">
+						<h2>CSS3 features</h2>
 					</section>
 
 					<section>
-						<h2>LiveReload</h2>
-						<a href="#" class="image navigate-down">
-							<img src="live-reload.png" alt="live reload">
-						</a>
+						<div class="box without-radius" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+}
+						</pre></code>
+					</section>
+
+					<section>
+						<div class="box radius" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    border-radius: 8px;
+}
+						</pre></code>
+					</section>
+
+					<section>
+						<div class="box gradient" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    background: linear-gradient(to bottom, #eee, #999, #eee);
+}
+						</pre></code>
 					</section>
 					
 					<section>
-						<h2>SCSS</h2>
-						<a href="#" class="image navigate-down">
-							<img src="glasses.svg" alt="scss">
-						</a>
-					</section>					
+						<div class="box shadow" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    box-shadow: 5px 5px 0 orange;
+}
+						</pre></code>
+					</section>
 
 					<section>
-						<h2>boilerplate project</h2>
-						<pre><code data-item>
-https://github.com/abruzzi/design-boilerplate
-						</code></pre>
-					</section>					
-
-					<section>
-						<h2>Static web site</h2>
-						<pre><code data-item>
-python -m SimpleHTTPServer 9999
-						</code></pre>
+						<div class="box text-shadow shadow" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    box-shadow: 5px 5px 0 orange;
+    text-shadow: 2px 2px 1px gray;
+}
+						</pre></code>
 					</section>
 
 				</section>
+<style>
+	.without-transition {
+		background: white;
+		color: orange;
+	}
 
-				<section data-background="#4d7e65">
+	.without-transition:hover {
+		background: orange;
+		color: white;
+	}
+
+	.transition {
+		background: white;
+		color: orange;
+		transition: all .5s ease-in-out;
+	}
+
+	.transition:hover {
+		background: orange;
+		color: white;
+	}
+
+	.scale:hover {
+		transform: scale(1.2);
+	}
+	.rotate:hover {
+		transform: rotate(180deg);	
+	}
+	.translate:hover {
+		transform: translate(200px, 100px);
+	}
+</style>
+				<section>
 					<section>
-						<h2>Let's talk about font</h2>
+						<h2>CSS3 Interactions</h2>
+					</section>
+					
+					<section>
+						<h3>Transition</h3>
 					</section>
 
 					<section>
-						<h2>Google font api</h2>
-						<pre><code data-item>
-http://www.google.com/fonts#
-						</code></pre>
-					</section>	
+						<div class="box without-transition" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+}
 
-					<section>
-						<h2>Font Icon</h2>
-						<pre><code data-item>
-http://fortawesome.github.io/Font-Awesome/icons/
-https://icomoon.io/
-						</code></pre>
+.element:hover {
+    background: orange;
+    color: white;
+}					
+						</pre></code>
 					</section>
 
 					<section>
-						<h2>Font Icon</h2>
-						<a href="#" class="image navigate-down">
-							<img src="fonticon.png" alt="font icon">
-						</a>
+						<div class="box transition" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    transition: all .5s ease-in-out;
+}
+
+.element:hover {
+    background: orange;
+    color: white;
+}							
+						</pre></code>
 					</section>
+
+
+					<section>
+						<h3>Transform</h3>
+					</section>
+
+					<section>
+						<img src="cube-resized.jpg" class="scale">
+						<code><pre>
+.element:hover {
+    transform: scale(1.2);
+}
+						</pre></code>
+					</section>
+
+
+					<section>
+						<img src="cube-resized.jpg" class="rotate">
+						<code><pre>
+.element:hover {
+    transform: rotate(180deg);
+}
+						</pre></code>
+					</section>
+
+					<section>
+						<img src="cube-resized.jpg" class="translate">
+						<code><pre>
+.translate:hover {
+    transform: translate(200px, 100px);
+}
+						</pre></code>
+					</section>
+
+
 				</section>
+	
 
-				<section data-background="#674230">
-					<section data-background="#674230">
-						<h2>Sublime on <span style="color: lightgreen">steroids</span></h2>
+				<section>
+					<section>
+						<h2>CSS3 Colors</h2>
 					</section>
-
-					<section data-background="#674230">
-						<h2>CMD + SHIFT + <span style="color: lightgreen">P</span></h2>
+					<section>
+						<img src="color-platter.jpeg" alt="color">
 					</section>
-
-					<section data-background="#674230">
-						<h2>Emmet</h2>
-						<pre><code data-item>
-ul>li*3>.feature>span.number+i+h4+p
-						</code></pre>
+					<section>
+						<img src="hsl-hsv.jpeg" alt="color">
 					</section>
-
-					<section data-background="#674230">
-						<h2>Emmet</h2>
-						<pre><code data-item>
-&lt;ul&gt;
-	&lt;li&gt;
-		&lt;div class=&quot;feature&quot;&gt;
-			&lt;span class=&quot;number&quot;&gt;&lt;/span&gt;
-			&lt;i&gt;&lt;/i&gt;
-			&lt;h4&gt;&lt;/h4&gt;
-			&lt;p&gt;&lt;/p&gt;
-		&lt;/div&gt;
-	&lt;/li&gt;
-	...
-&lt;/ul&gt;
-						</code></pre>
+					<section>
+						<h2 style="color: hsl(0, 100%, 50%)">hsl(0, 100%, 50%)</h2>
+					</section>
+					<section>
+						<h2 style="color: hsl(60, 100%, 50%)">hsl(60, 100%, 50%)</h2>
+					</section>
+					<section>
+						<h2 style="color: hsl(120, 100%, 50%)">hsl(120, 100%, 50%)</h2>
 					</section>
 				</section>
 
