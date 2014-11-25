@@ -7,6 +7,9 @@ $background-color: #eeeeee;
 $text-color: #3e3e3e;
 $heading-color: hsl(160, 90%, 40%);
 
+$small-break: 320px;
+$large-break: 1200px;
+
 body {
 	font-size: 62.5%;
 	font-family: 'Open Sans', sans-serif;
@@ -103,10 +106,16 @@ header {
 	h3 {
 		@include section-title;
 	}
-
+	
 	li {
 		float: left;
 		width: 33.33%;
+
+
+		@media screen and (max-width: $small-break) {
+			float: none;
+			width: 100%;
+		}
 
 		i {
 			font-size: 3em;
@@ -133,50 +142,6 @@ header {
 	content: url("../images/gallery-#{$index}-resized.jpg");
 }
 
-.gallery {
-	padding: 2em 0 8em 0;
-	
-	h3 {
-		@include section-title;
-	}
-
-	li {
-		float: left;
-		width: 25%;
-		padding: 0 1em;
-		box-sizing: border-box;
-
-		img {
-			width: 100%;
-			@include box-shadow(1px 1px 1px $text-color);
-			@include border-radius(.2em);
-			opacity: .9;
-			@include transition(all .2s ease 0s);
-			&:hover {
-				@include transform(scale(1.2));
-			}
-		}
-
-		&:nth-child(1) img {
-			@include gallery-image(1);
-		}
-
-		&:nth-child(2) img {
-			@include gallery-image(2);
-		}
-
-		&:nth-child(3) img {
-			@include gallery-image(3);
-		}
-
-		&:nth-child(4) img {
-			@include gallery-image(4);
-		}
-	}
-
-	@include clearfix;
-}
-
 .pages {
 	padding: 2em 0;
 	background-color: #dddddd;
@@ -193,6 +158,11 @@ header {
 		li {
 			float: left;
 			width: 50%;
+			
+			@media screen and (max-width: $small-break) {
+				float: none;
+				width: 100%;
+			}
 
 			.thumb {
 				width: 100%;
@@ -208,6 +178,9 @@ header {
 				h4{
 					text-align: left;
 					padding-left: 1.5em;
+					@media screen and (max-width: $small-break) {
+						padding-top: 1em;
+					}
 					font-size: 2em;
 					font-weight: bold;
 				}
@@ -261,6 +234,54 @@ header {
 			}
 		}
 	}
+}
+
+.gallery {
+	padding: 2em 0 8em 0;
+	
+	h3 {
+		@include section-title;
+	}
+
+	li {
+		float: left;
+		width: 25%;
+		@media screen and (max-width: $small-break) {
+			width: 50%;
+			padding: 1em;
+		}
+		padding: 0 1em;
+		box-sizing: border-box;
+
+		img {
+			width: 100%;
+			@include box-shadow(1px 1px 1px $text-color);
+			@include border-radius(.2em);
+			opacity: .9;
+			@include transition(all .2s ease 0s);
+			&:hover {
+				@include transform(scale(1.2));
+			}
+		}
+
+		&:nth-child(1) img {
+			@include gallery-image(1);
+		}
+
+		&:nth-child(2) img {
+			@include gallery-image(2);
+		}
+
+		&:nth-child(3) img {
+			@include gallery-image(3);
+		}
+
+		&:nth-child(4) img {
+			@include gallery-image(4);
+		}
+	}
+
+	@include clearfix;
 }
 
 footer {
