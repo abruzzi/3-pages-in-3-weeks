@@ -3,10 +3,13 @@
 
 @import "compass/utilities/general/clearfix";
 
+@import "icomoon";
+
 $background-color: #eeeeee;
 $text-color: #3e3e3e;
 $heading-color: hsl(160, 90%, 40%);
 
+$mask-color: #333333;
 $small-break: 320px;
 $large-break: 1200px;
 
@@ -17,12 +20,6 @@ body {
     color: $text-color;
     background-color: $background-color;
     width: 100%;
-}
-
-.main {
-	max-width: 1200px;
-	margin: 0 auto;
-	width: 100%;
 }
 
 header {
@@ -47,7 +44,7 @@ header {
 .hero {
 	width: 100%;
 	position: relative;
-	background-color: #333333;
+	background-color: $mask-color;
 	z-index: 1;
 
 	&:after {
@@ -243,43 +240,61 @@ header {
 		@include section-title;
 	}
 
-	li {
-		float: left;
-		width: 25%;
-		@media screen and (max-width: $small-break) {
-			width: 50%;
-			padding: 1em;
-		}
-		padding: 0 1em;
-		box-sizing: border-box;
+	ul {
+		padding: 0 2em;
 
-		img {
-			width: 100%;
-			@include box-shadow(1px 1px 1px $text-color);
-			@include border-radius(.2em);
-			opacity: .9;
-			@include transition(all .2s ease 0s);
-			&:hover {
-				@include transform(scale(1.2));
+		li {
+			float: left;
+			width: 25%;
+			
+			@media screen and (max-width: $small-break) {
+				width: 50%;
+				padding: 1em;
 			}
-		}
 
-		&:nth-child(1) img {
-			@include gallery-image(1);
-		}
+			box-sizing: border-box;
 
-		&:nth-child(2) img {
-			@include gallery-image(2);
-		}
+			a {
+				display: block;
+				position: relative;
+				width: 100%;
+				
+				overflow: hidden;	
+				&::after {
+					content: "";
+					display: block;
+					background: rgba(51, 51, 51, .5);
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}	
+				
+				&:hover {
+					&::after {
+						display: none;
+					}
+				}
+			}
 
-		&:nth-child(3) img {
-			@include gallery-image(3);
-		}
+			img {
+				width: 100%;
+				@include transition(all .2s ease-in-out);
+				&:hover {
+					@include transform(scale(1.2));
+				}
+			}
 
-		&:nth-child(4) img {
-			@include gallery-image(4);
-		}
+			@for $i from 1 to 8 {
+				&:nth-child(#{$i}) img {
+					@include gallery-image(#{$i});
+				}	
+			}
+			
+		}		
 	}
+
 
 	@include clearfix;
 }
@@ -301,142 +316,3 @@ footer {
 	@include clearfix;
 }
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?-tazh2a');
-	src:url('../fonts/icomoon.eot?#iefix-tazh2a') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-tazh2a') format('woff'),
-		url('../fonts/icomoon.ttf?-tazh2a') format('truetype'),
-		url('../fonts/icomoon.svg?-tazh2a#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-	font-family: 'icomoon';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.icon-circle-o-notch:before {
-	content: "\e625";
-}
-.icon-google-plus:before {
-	content: "\e601";
-}
-.icon-email:before {
-	content: "\e602";
-}
-.icon-github:before {
-	content: "\e603";
-}
-.icon-sina-weibo:before {
-	content: "\e604";
-}
-.icon-pencil:before {
-	content: "\e611";
-}
-.icon-quill:before {
-	content: "\e61d";
-}
-.icon-books:before {
-	content: "\e623";
-}
-.icon-tag:before {
-	content: "\e612";
-}
-.icon-address-book:before {
-	content: "\e613";
-}
-.icon-bell:before {
-	content: "\e61e";
-}
-.icon-mobile:before {
-	content: "\e606";
-}
-.icon-redo:before {
-	content: "\e61f";
-}
-.icon-user:before {
-	content: "\e61c";
-}
-.icon-users:before {
-	content: "\e607";
-}
-.icon-search:before {
-	content: "\e620";
-}
-.icon-wrench:before {
-	content: "\e624";
-}
-.icon-list:before {
-	content: "\e614";
-}
-.icon-flag:before {
-	content: "\e608";
-}
-.icon-heart:before {
-	content: "\e615";
-}
-.icon-thumbs-up:before {
-	content: "\e616";
-}
-.icon-close:before {
-	content: "\e60e";
-}
-.icon-minus:before {
-	content: "\e60f";
-}
-.icon-plus:before {
-	content: "\e610";
-}
-.icon-loop:before {
-	content: "\e617";
-}
-.icon-facebook:before {
-	content: "\e605";
-}
-.icon-twitter:before {
-	content: "\e618";
-}
-.icon-skype:before {
-	content: "\e600";
-}
-.icon-maximize:before {
-	content: "\e621";
-}
-.icon-star:before {
-	content: "\e609";
-}
-.icon-video:before {
-	content: "\e60a";
-}
-.icon-settings:before {
-	content: "\e60b";
-}
-.icon-lock:before {
-	content: "\e60c";
-}
-.icon-world:before {
-	content: "\e60d";
-}
-.icon-cross:before {
-	content: "\e619";
-}
-.icon-min:before {
-	content: "\e61a";
-}
-.icon-max:before {
-	content: "\e61b";
-}
-.icon-ellipsis:before {
-	content: "\e622";
-}
