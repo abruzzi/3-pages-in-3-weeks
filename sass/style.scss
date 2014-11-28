@@ -286,7 +286,7 @@ header {
 				}
 			}
 
-			@for $i from 1 to 8 {
+			@for $i from 1 to 9 {
 				&:nth-child(#{$i}) img {
 					@include gallery-image(#{$i});
 				}	

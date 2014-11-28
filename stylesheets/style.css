@@ -607,6 +607,10 @@ header li:hover {
 .gallery ul li:nth-child(7) img {
   content: url("../images/gallery-7-resized.jpg");
 }
+/* line 290, ../sass/style.scss */
+.gallery ul li:nth-child(8) img {
+  content: url("../images/gallery-8-resized.jpg");
+}
 
 /* line 302, ../sass/style.scss */
 footer {
