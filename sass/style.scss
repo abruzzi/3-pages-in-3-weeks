@@ -43,6 +43,7 @@ $break-large: 1024px;
 body {
 	font-size: 62.5%;
 	font-family: 'Open Sans', sans-serif;
+	@include font-smoothing;
     text-align: center;
     color: $text-color;
     background-color: $background-color;
@@ -141,9 +142,12 @@ header {
 		float: left;
 		width: 33.33%;
 
-
-		@media screen and (max-width: $small-break) {
+		@include respond-to(handhelds) {
 			float: none;
+			width: 100%;
+		}
+
+		@include respond-to(medium-screens) {
 			width: 100%;
 		}
 
@@ -189,9 +193,16 @@ header {
 			float: left;
 			width: 50%;
 			
-			@media screen and (max-width: $small-break) {
+			@include respond-to(handhelds) {
 				float: none;
 				width: 100%;
+				margin-bottom: 2em;
+			}
+
+			@include respond-to(medium-screens) {
+				float: none;
+				width: 100%;
+				margin-bottom: 2em;
 			}
 
 			.thumb {
@@ -280,9 +291,14 @@ header {
 			float: left;
 			width: 25%;
 			
-			@media screen and (max-width: $small-break) {
+
+			@include respond-to(handhelds) {
+				float: none;
+				width: 100%;
+			}
+
+			@include respond-to(medium-screens) {
 				width: 50%;
-				padding: 1em;
 			}
 
 			box-sizing: border-box;
@@ -352,7 +368,7 @@ header {
 	ul {
 		padding: 0 2em;
 	}
-	
+
 	li {
 		float: left;
 		width: 25%;
