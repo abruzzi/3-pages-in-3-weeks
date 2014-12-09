@@ -7,11 +7,38 @@
 
 $background-color: #eeeeee;
 $text-color: #3e3e3e;
+$light-text-color: #eeeeee;
 $heading-color: hsl(160, 90%, 40%);
 
 $mask-color: #333333;
 $small-break: 320px;
 $large-break: 1200px;
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+$break-small: 320px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
 
 body {
 	font-size: 62.5%;
@@ -41,8 +68,14 @@ header {
 	@include clearfix;
 }
 
+.main {
+	max-width: 120em;
+	margin: 0 auto;
+}
+
 .hero {
 	width: 100%;
+	min-height: 50em;
 	position: relative;
 	background-color: $mask-color;
 	z-index: 1;
@@ -299,7 +332,174 @@ header {
 	@include clearfix;
 }
 
+
+.cases {
+	padding: 3em 0 6em 0;
+	background-color: #dddddd;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+	h2 {
+		color: $heading-color;
+		font-size: 3em;
+		padding: 1em 0;
+		text-transform: uppercase;
+		
+		@include section-title;
+	}
+
+	ul {
+		padding: 0 2em;
+	}
+	
+	li {
+		float: left;
+		width: 25%;
+
+		@include respond-to(handhelds) {
+			float: none;
+			width: 100%;
+		}
+
+		@include respond-to(medium-screens) {
+			width: 50%;
+		}
+
+		height: 25em;
+		overflow: hidden;
+
+		.case {
+			width: 100%;
+		}
+		
+		position: relative;
+
+		&:hover {
+			.information {
+				top:16em;
+			}
+
+			.mask {
+				top:0;
+			}
+		}
+
+		.mask {
+			display: block;
+			position: absolute;
+			top:-25em;
+			left:0;
+			height: 100%;
+			width: 100%;
+			background-color: $text-color;
+			opacity: .2;
+		}
+
+		.information {
+			position: absolute;
+			background-color: $text-color;
+			top:25em;
+			left:0;
+			width: 100%;
+			height: 100%;
+			opacity: .9;
+			transition: all .4s ease-in-out;
+			text-align: left;
+			padding: 0 1em;
+			box-sizing: border-box;
+			color: white;
+
+			h3 {
+				font-size: 2em;
+				padding: 1em 0;
+			}
+
+			.actions {
+				text-align: center;
+				width: 90%;
+				margin: 0 auto;
+				padding: 5em 0;
+
+				span {
+					font-size: 2em;
+					display: inline-block;
+					border: 1px solid transparent;
+					@include border-radius(100%);
+					padding: .3em;
+					margin-right: 1em;
+					transition: all .3s ease-in-out;
+					cursor: pointer;
+
+					&:hover {
+						color: white;
+						background-color: $heading-color;
+						border: 1px solid $heading-color;
+					}
+				}
+			}
+
+			.detail {
+				position: relative;
+				padding-top: 2em;
+				.avator {
+					position: absolute;
+					width: 3em;
+					height: 3em;
+					@include border-radius(100%);
+				}
+
+				p {
+					padding: 1em 0 0 0;
+					font-size: 1.5em;
+				}
+				.contact {
+					margin-left: 4em;
+					.name {
+						font-weight: bold;
+						margin-right: .5em;
+					}
+					
+					.role {
+						color: $light-text-color;
+					}
+
+					.date {
+						color: $light-text-color;	
+						float: right;
+					}
+				}
+
+				.like {
+					position: absolute;
+					font-size:2em;
+					bottom: -.4em;
+					right: 0;				
+
+					color: white;
+					background-color: $heading-color;
+					border: 1px solid $heading-color;
+
+					padding: .2em;
+					@include border-radius(100%);
+					transition: all .3s ease-in-out;
+
+					&:hover {
+						color: $heading-color;
+						background-color: white;
+						border: 1px solid transparent;
+							
+					}
+				}
+			}
+		}
+	}
+
+	@include clearfix;
+}
+
 footer {
+	padding: 1em 0;
 	p {
 		font-size: 1.5em;
 		color: white;
