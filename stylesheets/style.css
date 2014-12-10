@@ -721,7 +721,8 @@ header li:hover {
 /* line 376, ../sass/style.scss */
 .cases li {
   float: left;
-  width: 25%;
+  width: 33.33%;
+  box-sizing: border-box;
   height: 22em;
   overflow: hidden;
   position: relative;
@@ -739,19 +740,19 @@ header li:hover {
     width: 50%;
   }
 }
-/* line 392, ../sass/style.scss */
+/* line 394, ../sass/style.scss */
 .cases li .case {
   width: 100%;
 }
-/* line 399, ../sass/style.scss */
+/* line 401, ../sass/style.scss */
 .cases li:hover .information {
   top: 14em;
 }
-/* line 403, ../sass/style.scss */
+/* line 405, ../sass/style.scss */
 .cases li:hover .mask {
   top: 0;
 }
-/* line 408, ../sass/style.scss */
+/* line 410, ../sass/style.scss */
 .cases li .mask {
   display: block;
   position: absolute;
@@ -762,7 +763,7 @@ header li:hover {
   background-color: #3e3e3e;
   opacity: .1;
 }
-/* line 419, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 .cases li .information {
   position: absolute;
   background-color: #3e3e3e;
@@ -777,19 +778,19 @@ header li:hover {
   box-sizing: border-box;
   color: white;
 }
-/* line 433, ../sass/style.scss */
+/* line 435, ../sass/style.scss */
 .cases li .information h3 {
   font-size: 2em;
   padding: 1em 0;
 }
-/* line 438, ../sass/style.scss */
+/* line 440, ../sass/style.scss */
 .cases li .information .actions {
   text-align: center;
   width: 90%;
   margin: 0 auto;
   padding: 5em 0;
 }
-/* line 444, ../sass/style.scss */
+/* line 446, ../sass/style.scss */
 .cases li .information .actions span {
   font-size: 2em;
   display: inline-block;
@@ -802,54 +803,56 @@ header li:hover {
   transition: all .3s ease-in-out;
   cursor: pointer;
 }
-/* line 454, ../sass/style.scss */
+/* line 456, ../sass/style.scss */
 .cases li .information .actions span:hover {
   color: white;
   background-color: #0ac285;
   border: 1px solid #0ac285;
 }
-/* line 462, ../sass/style.scss */
+/* line 464, ../sass/style.scss */
 .cases li .information .detail {
   position: relative;
   padding-top: 2em;
 }
-/* line 465, ../sass/style.scss */
+/* line 467, ../sass/style.scss */
 .cases li .information .detail .avator {
   position: absolute;
   width: 3em;
   height: 3em;
+  bottom: 0;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
   border-radius: 100%;
 }
-/* line 472, ../sass/style.scss */
+/* line 475, ../sass/style.scss */
 .cases li .information .detail p {
-  padding: 1em 0 0 0;
+  padding: .5em 0 0 0;
   font-size: 1.5em;
 }
-/* line 476, ../sass/style.scss */
+/* line 479, ../sass/style.scss */
 .cases li .information .detail .contact {
   margin-left: 4em;
 }
-/* line 478, ../sass/style.scss */
+/* line 481, ../sass/style.scss */
 .cases li .information .detail .contact .name {
   font-weight: bold;
   margin-right: .5em;
 }
-/* line 483, ../sass/style.scss */
+/* line 486, ../sass/style.scss */
 .cases li .information .detail .contact .role {
   color: #eeeeee;
 }
-/* line 487, ../sass/style.scss */
+/* line 490, ../sass/style.scss */
 .cases li .information .detail .contact .date {
+  display: none;
   color: #eeeeee;
   float: right;
 }
-/* line 493, ../sass/style.scss */
+/* line 497, ../sass/style.scss */
 .cases li .information .detail .like {
   position: absolute;
   font-size: 2em;
-  bottom: -.4em;
+  bottom: 0;
   right: 0;
   color: white;
   background-color: #0ac285;
@@ -860,26 +863,26 @@ header li:hover {
   border-radius: 100%;
   transition: all .3s ease-in-out;
 }
-/* line 507, ../sass/style.scss */
+/* line 511, ../sass/style.scss */
 .cases li .information .detail .like:hover {
   color: #0ac285;
   background-color: white;
   border: 1px solid transparent;
 }
 
-/* line 521, ../sass/style.scss */
+/* line 525, ../sass/style.scss */
 footer {
   padding: 1em 0;
   background-color: #333333;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 523, ../sass/style.scss */
+/* line 527, ../sass/style.scss */
 footer p {
   font-size: 1.5em;
   color: white;
 }
-/* line 526, ../sass/style.scss */
+/* line 530, ../sass/style.scss */
 footer p a {
   color: #0ac285;
   text-decoration: none;

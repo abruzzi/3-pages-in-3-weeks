@@ -375,7 +375,9 @@ header {
 
 	li {
 		float: left;
-		width: 25%;
+		width: 33.33%;
+		// padding: 1em;
+		box-sizing: border-box;
 
 		@include respond-to(handhelds) {
 			float: none;
@@ -466,11 +468,12 @@ header {
 					position: absolute;
 					width: 3em;
 					height: 3em;
+					bottom: 0;
 					@include border-radius(100%);
 				}
 
 				p {
-					padding: 1em 0 0 0;
+					padding: .5em 0 0 0;
 					font-size: 1.5em;
 				}
 				.contact {
@@ -485,6 +488,7 @@ header {
 					}
 
 					.date {
+						display: none;
 						color: $light-text-color;	
 						float: right;
 					}
@@ -493,7 +497,7 @@ header {
 				.like {
 					position: absolute;
 					font-size:2em;
-					bottom: -.4em;
+					bottom: 0;
 					right: 0;				
 
 					color: white;
