@@ -194,7 +194,7 @@ header {
 	}
 
 	&:after {
-		background: url('../images/hero-1-resized.jpg') 0 -7em;
+		background: url('../images/hero-1-resized.jpg') 0 -9em;
 		background-size: 100%;
 		position: absolute;
 		content: "";
@@ -205,7 +205,12 @@ header {
 		top: 0;
 		left: 0;
 	}
-
+}
+.workshop2-hero {
+	&:after {
+		background: url('../images/workshop2/classshow/1.pic.jpg') 0 -36em;
+		background-size: 100% auto;
+	}
 }
 
 @mixin section-title() {
@@ -347,6 +352,10 @@ header {
 
 @mixin gallery-image($index) {
 	content: url("../images/gallery-#{$index}-resized.jpg");
+}
+
+@mixin gallery-image-workshop2($index) {
+	content: url("../images/workshop2/classshow/#{$index}.pic.jpg");
 }
 
 .pages {
@@ -527,7 +536,13 @@ header {
 	@include clearfix;
 }
 
-
+.gallery.gallery-workshop2 li {
+	@for $i from 1 to 5 {
+		&:nth-child(#{$i}) img {
+			@include gallery-image-workshop2(#{$i});
+		}	
+	}
+}
 .cases {
 	padding: 3em 0 6em 0;
 	a {
