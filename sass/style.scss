@@ -230,7 +230,7 @@ header {
 }
 
 .history {
-	padding: 2em 0 7em;
+	padding: 0 0 4em;
 	background-color: $gray-bg;
 	h3 {
 		@include section-title;
@@ -240,6 +240,7 @@ header {
 		float: left;
 		width: 33.33%;
 		position: relative;
+		margin-bottom: 4em;
 
 		@include respond-to(handhelds) {
 			float: none;
@@ -306,6 +307,7 @@ header {
 			background: $heading-color;
 			color: #fff;
 			text-decoration: none;
+			display: inline-block;
 		}
 	}
 
