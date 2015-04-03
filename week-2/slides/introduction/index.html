@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>3 pages in 3 weeks</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-background="#F68D2E">
+					<h1>3 pages in 3 weeks</h1>
+					<h2>week 2</h2>
+					<p>
+						<small>Created by <a href="http://icodeit.org">Juntao Qiu</a></small>
+					</p>
+				</section>
+
+
+				<section data-background="#407EC9">
+					<section>
+						<h2>HTML5 Elements</h2>
+					</section>
+
+					<section>
+						<ul>
+							<li>
+								<h3>nav</h3>
+							</li>
+							<li>
+								<h3>header</h3>
+							</li>
+							<li>
+								<h3>aside</h3>
+							</li>
+							<li>
+								<h3>section</h3>
+							</li>
+							<li>
+								<h3>article(as section)</h3>
+							</li>
+							<li>
+								<h3>footer</h3>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>It's all about Semantics</h3>
+					</section>
+				</section>
+
+<style>
+	.box {
+		width: 200px;
+		height: 50px;
+	}
+
+	.without-radius {
+		background: white;
+		color: orange;	
+	}
+
+	.radius {
+		background: white;
+		color: orange;
+		border-radius: 4px;
+	}
+	
+	.gradient {
+		background: white;
+		color: orange;
+		background: linear-gradient(to bottom, #eee, #999, #eee);
+	}
+
+	.shadow {
+		background: white;
+		color: orange;
+		box-shadow: 5px 5px 0 orange;
+	}
+
+	.text-shadow {
+		text-shadow: 2px 2px 1px gray;
+	}
+</style>
+				<section>
+					<section data-background="#05C3DE">
+						<h2>CSS3 features</h2>
+					</section>
+
+					<section>
+						<div class="box without-radius" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+}
+						</pre></code>
+					</section>
+
+					<section>
+						<div class="box radius" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    border-radius: 8px;
+}
+						</pre></code>
+					</section>
+
+					<section>
+						<div class="box gradient" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    background: linear-gradient(to bottom, #eee, #999, #eee);
+}
+						</pre></code>
+					</section>
+					
+					<section>
+						<div class="box shadow" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    box-shadow: 5px 5px 0 orange;
+}
+						</pre></code>
+					</section>
+
+					<section>
+						<div class="box text-shadow shadow" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    box-shadow: 5px 5px 0 orange;
+    text-shadow: 2px 2px 1px gray;
+}
+						</pre></code>
+					</section>
+
+				</section>
+<style>
+	.without-transition {
+		background: white;
+		color: orange;
+	}
+
+	.without-transition:hover {
+		background: orange;
+		color: white;
+	}
+
+	.transition {
+		background: white;
+		color: orange;
+		transition: all .5s ease-in-out;
+	}
+
+	.transition:hover {
+		background: orange;
+		color: white;
+	}
+
+	.scale:hover {
+		transform: scale(1.2);
+	}
+	.rotate:hover {
+		transform: rotate(180deg);	
+	}
+	.translate:hover {
+		transform: translate(200px, 100px);
+	}
+</style>
+				<section>
+					<section>
+						<h2>CSS3 Interactions</h2>
+					</section>
+					
+					<section>
+						<h3>Transition</h3>
+					</section>
+
+					<section>
+						<div class="box without-transition" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+}
+
+.element:hover {
+    background: orange;
+    color: white;
+}					
+						</pre></code>
+					</section>
+
+					<section>
+						<div class="box transition" style="margin: 0 auto; padding: 10px;">
+							My content
+						</div>
+						<code><pre>
+.element {
+    background: white;
+    color: orange;
+    transition: all .5s ease-in-out;
+}
+
+.element:hover {
+    background: orange;
+    color: white;
+}							
+						</pre></code>
+					</section>
+
+
+					<section>
+						<h3>Transform</h3>
+					</section>
+
+					<section>
+						<img src="cube-resized.jpg" class="scale">
+						<code><pre>
+.element:hover {
+    transform: scale(1.2);
+}
+						</pre></code>
+					</section>
+
+
+					<section>
+						<img src="cube-resized.jpg" class="rotate">
+						<code><pre>
+.element:hover {
+    transform: rotate(180deg);
+}
+						</pre></code>
+					</section>
+
+					<section>
+						<img src="cube-resized.jpg" class="translate">
+						<code><pre>
+.translate:hover {
+    transform: translate(200px, 100px);
+}
+						</pre></code>
+					</section>
+
+
+				</section>
+	
+
+				<section>
+					<section>
+						<h2>CSS3 Colors</h2>
+					</section>
+					<section>
+						<img src="color-platter.jpeg" alt="color">
+					</section>
+					<section>
+						<img src="hsl-hsv.jpeg" alt="color">
+					</section>
+					<section>
+						<h2 style="color: hsl(0, 100%, 50%)">hsl(0, 100%, 50%)</h2>
+					</section>
+					<section>
+						<h2 style="color: hsl(60, 100%, 50%)">hsl(60, 100%, 50%)</h2>
+					</section>
+					<section>
+						<h2 style="color: hsl(120, 100%, 50%)">hsl(120, 100%, 50%)</h2>
+					</section>
+				</section>
+
+				<section>
+					<h2>THE END</h2>
+					<p>
+						<small><a href="https://github.com/abruzzi/3-pages-in-3-weeks">https://github.com/abruzzi/3-pages-in-3-weeks</a></small>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

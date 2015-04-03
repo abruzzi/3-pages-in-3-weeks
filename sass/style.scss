@@ -56,6 +56,18 @@ body {
 header {
 	padding: 0 1em;
 	background-color: $heading-color;
+	h1 {
+		float: left; 
+		font-weight: bold;
+		font-size: 1.5em;
+		line-height: 2em;
+		padding: 0 1em;
+		text-transform: uppercase;
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
 	li {
 		float: left;
 		a {
@@ -66,6 +78,32 @@ header {
 		}
 		&:hover {
 			background-color: hsl(160, 90%, 35%);
+			.sub-nav {
+				display: block;
+			}
+		}
+		.sub-nav {
+			display: none;
+			position: absolute;
+			width: 15em; 
+			z-index: 99;
+			top: 3em;
+			left: 300px;
+			p {
+				width: 100%;
+				line-height: 3em;
+				background-color: #444;
+				a {
+					text-decoration: none;
+					text-align: left;
+					color: white;
+					display: block;
+					padding: 0em 1em;
+					&:hover {
+						background: #333;
+					}
+				}
+			}
 		}
 	}
 	@include clearfix;
@@ -110,13 +148,68 @@ header {
 
 	p {
 		max-width: 70%;
-		font-weight: lighter;
 		color: #eee;
 		margin: 0 auto;
 		padding: 1em 0 8em 0;
 		span {
 			color: $heading-color;
 		}
+	}
+}
+
+.workshop-hero {
+	width: 100%;
+	min-height: 18em;
+	position: relative;
+	background-color: $mask-color;
+	z-index: 1;
+	.workshop-banner {
+		padding: 0 6em;
+		h2 {
+			text-align: left;
+			font-weight: bold;
+			font-size: 3em;
+			padding: 1.5em 0 0.3em;
+			text-transform: uppercase;
+			color: white;
+		}
+
+		p {
+			text-align: left;
+			color: #eee;
+			padding: 0.2em 0;
+			span {
+				color: $heading-color;
+			}
+			strong {
+				font-weight: bold;
+			}
+			&.time {
+				background-color: $heading-color;
+				padding: 0.1em 0.5em;
+				width: 200px;
+				margin-bottom: 1em;
+			}
+		}
+	}
+
+	&:after {
+		background: url('../images/hero-1-resized.jpg') 0 -9em;
+		background-size: 100%;
+		position: absolute;
+		content: "";
+		z-index: -1;
+		opacity: .3;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
+.workshop2-hero {
+	&:after {
+		background: url('../images/workshop2/classshow/1.pic.jpg') 0 -36em;
+		background-size: 100% auto;
 	}
 }
 
@@ -134,6 +227,89 @@ header {
 		height: .2em;
 		margin: .4em auto;
 	}	
+}
+
+.history {
+	padding: 2em 0 7em;
+	background-color: $gray-bg;
+	h3 {
+		@include section-title;
+	}
+
+	li {
+		float: left;
+		width: 33.33%;
+		position: relative;
+
+		@include respond-to(handhelds) {
+			float: none;
+			width: 100%;
+		}
+
+		@include respond-to(medium-screens) {
+			width: 100%;
+		}
+
+		.number {
+			height: 60px;
+			width: 240px;
+			margin: 0 auto;
+			h4 {
+				background: #d8d8d8;
+				padding-top: 1.5em;
+				height: 100%;
+				font-weight: bold;
+				float: left;
+				width: 190px;
+			}
+			p {
+				float: left;
+				width: 50px;
+				height: 100%;
+				color: #fff;
+				font-size: 3em;
+				line-height: 1.2em;
+				font-weight: bold;
+				background: #666;
+				&.current-num {
+					background-color: $heading-color;
+				}
+			} 
+
+			@include clearfix;
+		}
+
+		.current-note {
+			position: absolute;
+			width: 240px;
+			top: 70px;
+			text-align: center;
+			color: $heading-color;
+		}
+
+		.subject {
+			margin: 0 auto;
+			width: 240px;
+			text-align: left;
+			p {
+				color: #6e6e6e;
+				margin-top: 2em;
+				margin-bottom: 2.5em;
+				strong {
+					font-weight: bold;
+				}
+			}
+		}
+
+		a {
+			padding: 0.5em 1em;
+			background: $heading-color;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+	@include clearfix;
 }
 
 .topics {
@@ -176,6 +352,10 @@ header {
 
 @mixin gallery-image($index) {
 	content: url("../images/gallery-#{$index}-resized.jpg");
+}
+
+@mixin gallery-image-workshop2($index) {
+	content: url("../images/workshop2/classshow/#{$index}.pic.jpg");
 }
 
 .pages {
@@ -262,12 +442,31 @@ header {
 			}
 		}
 	}
+
+}
+
+.workshop2 {
+	#week-1 {
+		.thumb {
+			img {
+				content: url("../images/workshop2/second-day.png");
+			}
+		}
+	}
+
+	#week-2 {
+		.thumb {
+			img {
+				content: url("../images/workshop2/third-day.png");
+			}
+		}
+	}
+	
 }
 
 
 .gallery {
 	padding: 2em 0 8em 0;
-	background-color: $gray-bg;
 	
 	h3 {
 		@include section-title;
@@ -337,7 +536,13 @@ header {
 	@include clearfix;
 }
 
-
+.gallery.gallery-workshop2 li {
+	@for $i from 1 to 5 {
+		&:nth-child(#{$i}) img {
+			@include gallery-image-workshop2(#{$i});
+		}	
+	}
+}
 .cases {
 	padding: 3em 0 6em 0;
 	a {
