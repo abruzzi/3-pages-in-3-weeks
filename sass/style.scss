@@ -159,7 +159,7 @@ header {
 
 .workshop-hero {
 	width: 100%;
-	min-height: 18em;
+	min-height: 20em;
 	position: relative;
 	background-color: $mask-color;
 	z-index: 1;
@@ -210,6 +210,15 @@ header {
 	&:after {
 		background: url('../images/workshop2/classshow/1.pic.jpg') 0 -36em;
 		background-size: 100% auto;
+		background-position: center;
+	}
+}
+
+.workshop3-hero {
+	&:after {
+		background: url('../images/workshop3/classshow/4.jpg') 0 -36em;
+		background-size: 100% auto;
+		background-position: center;
 	}
 }
 
@@ -359,7 +368,10 @@ header {
 @mixin gallery-image-workshop2($index) {
 	content: url("../images/workshop2/classshow/#{$index}.pic.jpg");
 }
-
+@mixin gallery-image-workshop3($index) {
+	content: url("../images/workshop3/classshow/#{$index}.jpg");
+	height: 257px;
+}
 .pages {
 	padding: 2em 0;
 	background-color: $gray-bg;
@@ -372,7 +384,7 @@ header {
 		padding: 0 6em 4em 6em;
 	}
 
-	#week-1, #week-2{
+	#week-1, #week-2 {
 		li {
 			float: left;
 			width: 50%;
@@ -436,6 +448,7 @@ header {
 			}
 		}
 	}
+
 	
 	#week-3 {
 		.thumb {
@@ -460,6 +473,25 @@ header {
 		.thumb {
 			img {
 				content: url("../images/workshop2/third-day.png");
+			}
+		}
+	}
+	
+}
+
+.workshop3 {
+	#week-1 {
+		.thumb {
+			img {
+				content: url("../images/workshop3/first-day.png");
+			}
+		}
+	}
+
+	#week-2 {
+		.thumb {
+			img {
+				content: url("../images/workshop3/second-assignment.png");
 			}
 		}
 	}
@@ -542,6 +574,13 @@ header {
 	@for $i from 1 to 5 {
 		&:nth-child(#{$i}) img {
 			@include gallery-image-workshop2(#{$i});
+		}	
+	}
+}
+.gallery.gallery-workshop3 li {
+	@for $i from 1 to 9 {
+		&:nth-child(#{$i}) img {
+			@include gallery-image-workshop3(#{$i});
 		}	
 	}
 }
