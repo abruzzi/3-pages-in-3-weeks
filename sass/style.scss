@@ -199,7 +199,7 @@ header {
 		position: absolute;
 		content: "";
 		z-index: -1;
-		opacity: .3;
+		opacity: .6;
 		width: 100%;
 		height: 100%;
 		top: 0;
@@ -606,7 +606,7 @@ header {
 	li {
 		float: left;
 		width: 33.33%;
-		border: 2px solid #0ac285;
+		border-bottom: 4px solid #0ac285;
 		box-sizing: border-box;
 
 		@include respond-to(handhelds) {
