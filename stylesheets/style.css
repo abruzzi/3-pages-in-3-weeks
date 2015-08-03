@@ -1234,15 +1234,32 @@ footer .note {
   z-index: 2;
 }
 
-/* line 52, ../sass/_workshop4.scss */
+/* line 54, ../sass/_workshop4.scss */
 .cases4 img {
   background-color: #f3f3f3;
 }
-/* line 55, ../sass/_workshop4.scss */
+/* line 57, ../sass/_workshop4.scss */
 .cases4 .avator {
   background: #fff url(../images/workshop4/user.png) no-repeat;
 }
-/* line 58, ../sass/_workshop4.scss */
+/* line 60, ../sass/_workshop4.scss */
 .cases4 li {
-  width: 50%;
+  width: 33.33%;
+  height: 16em;
+}
+/* line 64, ../sass/_workshop4.scss */
+.cases4 li:hover .information {
+  top: 9em;
+}
+/* line 68, ../sass/_workshop4.scss */
+.cases4 li:hover .mask {
+  top: 0;
+}
+/* line 72, ../sass/_workshop4.scss */
+.cases4 li .mask {
+  top: -16em;
+}
+/* line 76, ../sass/_workshop4.scss */
+.cases4 li .information {
+  top: 16em;
 }

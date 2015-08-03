@@ -48,6 +48,8 @@
 	}
 }
 
+$caseLiHeight: 16em;
+
 .cases4 {
 	img {
 		background-color: #f3f3f3;
@@ -56,7 +58,24 @@
 		background: #fff url(../images/workshop4/user.png) no-repeat;
 	}
 	li {
-		width:50%;
+		width:33.33%;
+		height:$caseLiHeight;
+		&:hover {
+			.information {
+				top:9em;
+			}
+
+			.mask {
+				top:0;
+			}
+		}
+		.mask {
+			top:-$caseLiHeight;
+		}
+
+		.information {
+			top:$caseLiHeight;
+		}
 	}
 }
 
