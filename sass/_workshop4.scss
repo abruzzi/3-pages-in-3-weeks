@@ -1,0 +1,65 @@
+.workshop4-hero {
+	&::after {
+		background-image: none;
+		background-color: rgba(20,40,19,.8);
+	}
+	background: url(../images/workshop4/classhow/1.jpg) 0 55% no-repeat;
+	background-size: cover;
+}
+.workshop4 {
+	#week-1, #week-2 {
+		.thumb img {
+			content: none;
+		}
+	}
+	#week-2 {
+		.thumb {
+			img {
+				&:first-child {
+					position:relative;
+					z-index:1;
+					width:100%;
+					transition: z-index 1s ease-in 0;
+					&:hover{
+						z-index:3;
+
+					}
+				}
+				&:nth-child(2) {
+					position:absolute;
+					left:5px;
+					width:40%;
+					height:auto;
+					bottom:-40px;
+					box-shadow:0 0 5px #ccc;
+					z-index:2;
+				}
+				&:last-child {
+					position:absolute;
+					right:5px;
+					height:90%;
+					width:auto;
+					bottom:-100px;
+					box-shadow:0 0 5px #ccc;
+					z-index:2;
+				}
+			}
+		}
+	}
+}
+
+.cases4 {
+	img {
+		background-color: #f3f3f3;
+	}
+	.avator {
+		background: #fff url(../images/workshop4/user.png) no-repeat;
+	}
+	li {
+		width:50%;
+	}
+}
+
+.gallery-workshop4 ul li {
+	
+}

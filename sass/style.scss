@@ -247,7 +247,7 @@ header {
 
 	li {
 		float: left;
-		width: 33.33%;
+		width: 25%;
 		position: relative;
 		margin-bottom: 4em;
 
@@ -773,3 +773,4 @@ footer {
 	@include clearfix;
 }
 
+@import "workshop4";

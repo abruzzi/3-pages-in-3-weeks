@@ -1,4 +1,4 @@
-/* line 5, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,45 +20,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../.rbenv/versions/1.9.3-p484/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../.rvm/gems/ruby-2.0.0-p598/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -540,7 +540,7 @@ header li .sub-nav p a:hover {
 /* line 248, ../sass/style.scss */
 .history li {
   float: left;
-  width: 33.33%;
+  width: 25%;
   position: relative;
   margin-bottom: 4em;
 }
@@ -1185,4 +1185,64 @@ footer .note {
   width: 80%;
   margin: 10px auto 10px auto;
   color: #9e9e9e;
+}
+
+/* line 1, ../sass/_workshop4.scss */
+.workshop4-hero {
+  background: url(../images/workshop4/classhow/1.jpg) 0 55% no-repeat;
+  background-size: cover;
+}
+/* line 2, ../sass/_workshop4.scss */
+.workshop4-hero::after {
+  background-image: none;
+  background-color: rgba(20, 40, 19, 0.8);
+}
+
+/* line 11, ../sass/_workshop4.scss */
+.workshop4 #week-1 .thumb img, .workshop4 #week-2 .thumb img {
+  content: none;
+}
+/* line 18, ../sass/_workshop4.scss */
+.workshop4 #week-2 .thumb img:first-child {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  transition: z-index 1s ease-in 0;
+}
+/* line 23, ../sass/_workshop4.scss */
+.workshop4 #week-2 .thumb img:first-child:hover {
+  z-index: 3;
+}
+/* line 28, ../sass/_workshop4.scss */
+.workshop4 #week-2 .thumb img:nth-child(2) {
+  position: absolute;
+  left: 5px;
+  width: 40%;
+  height: auto;
+  bottom: -40px;
+  box-shadow: 0 0 5px #ccc;
+  z-index: 2;
+}
+/* line 37, ../sass/_workshop4.scss */
+.workshop4 #week-2 .thumb img:last-child {
+  position: absolute;
+  right: 5px;
+  height: 90%;
+  width: auto;
+  bottom: -100px;
+  box-shadow: 0 0 5px #ccc;
+  z-index: 2;
+}
+
+/* line 52, ../sass/_workshop4.scss */
+.cases4 img {
+  background-color: #f3f3f3;
+}
+/* line 55, ../sass/_workshop4.scss */
+.cases4 .avator {
+  background: #fff url(../images/workshop4/user.png) no-repeat;
+}
+/* line 58, ../sass/_workshop4.scss */
+.cases4 li {
+  width: 50%;
 }
