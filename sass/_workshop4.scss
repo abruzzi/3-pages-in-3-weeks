@@ -80,5 +80,7 @@ $caseLiHeight: 16em;
 }
 
 .gallery-workshop4 ul li {
-	
+	img {
+		content:none!important;
+	}
 }

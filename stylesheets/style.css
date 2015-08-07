@@ -1263,3 +1263,8 @@ footer .note {
 .cases4 li .information {
   top: 16em;
 }
+
+/* line 83, ../sass/_workshop4.scss */
+.gallery-workshop4 ul li img {
+  content: none !important;
+}
