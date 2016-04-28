@@ -1,6 +1,6 @@
 ### 3 pages in 3 weeks
 
-`3 pages in 3 weeks` esstentially is a series workshop which try to help `DEV`s, `QA`s or even `UX`s to practice the basic `HTML/CSS` skills. As the name says, we'll use 3 weeks to implement 3 pages, each page is a individual web design from `dribble.com`. 
+`3 pages in 3 weeks` esstentially is a series workshop which try to help `DEV`s, `QA`s or even `UX`s to practice the basic `HTML/CSS` skills. As the name says, we'll use 3 weeks to implement 3 pages, each page is a individual web design from `dribbble.com`. 
 
 It doesn't matter which 3 pages your choose actaully, but the basic idea behind it is try to choose some `modern` and `fancy` ones.
 
