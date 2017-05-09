@@ -1,0 +1,58 @@
+img {
+	content: ''!important;
+}
+.pages #week-2 .thumb img {
+	box-shadow: 0 0 10px #999;
+	content: '';
+}
+#week-2 .thumb img:first-child {
+	max-width: 90%;
+	margin: 0 auto;
+	position:relative;
+	z-index:1;
+	transition: z-index 1s ease-in 0;
+}
+#week-2 .thumb img:first-child:hover{
+	z-index:3;
+
+}
+.workshop6 #week-2 .thumb img:nth-child(2) {
+  position: absolute;
+  left: 5px;
+  width: 40%;
+  height: auto;
+  bottom: -100px;
+  z-index: 2;
+}
+/* line 37, ../sass/_workshop4.scss */
+.workshop6 #week-2 .thumb img:last-child {
+  position: absolute;
+  right: 5px;
+  height: 90%;
+  width: auto;
+  bottom: -100px;
+  z-index: 2;
+}
+.showcase-title {
+	margin: 20px 0 15px;
+}
+.homework-list li {
+	margin: 5px 0;
+	width: 30%!important;
+}
+.homework-list a {
+	line-height: 23px;
+	color: #0ac285;
+	text-decoration: none;
+}
+.homework-list a:hover {
+	text-decoration: underline;
+}
+.workshop6-hero {
+	background: url(../images/workshop6/hero.jpg) center center;
+	background-size: cover;
+}
+.workshop6-hero::after {
+	background-color: rgba(20, 40, 19, 0.8);
+	background-image: none;
+}
